@@ -6,7 +6,7 @@ class TestCalculations(unittest.TestCase):
 
     def test_addition(self):
         calc = Calculations(8, 2)
-        self.assertEqual(calc.get_sum(), 11, 'Incorrect result for addition.')
+        self.assertEqual(calc.add(), 11, 'Incorrect result for addition.')
 
 
 if __name__ == '__main__':
