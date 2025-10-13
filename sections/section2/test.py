@@ -1,25 +1,23 @@
 import unittest
 from my_code.my_calculations import Calculations
 
+class TestCalc(unittest.TestCase):
 
-class TestCalculations(unittest.TestCase):
+    def test_add(self):
+        calc = Calculations(8, 2)
+        self.assertEqual(calc.get_sum(), 10, 'Addition failed.')
 
-    def test_sum(self):
-        calculation = Calculations(8, 2)
-        self.assertEqual(calculation.get_sum(), 10, 'The sum is wrong.')
+    def test_subtract(self):
+        calc = Calculations(8, 2)
+        self.assertEqual(calc.get_difference(), 6, 'Subtraction failed.')
 
-    def test_diff(self):
-        calculation = Calculations(8, 2)
-        self.assertEqual(calculation.get_difference(), 6, 'The difference is wrong.')
+    def test_multiply(self):
+        calc = Calculations(8, 2)
+        self.assertEqual(calc.get_product(), 16, 'Multiplication failed.')
 
-    def test_product(self):
-        calculation = Calculations(8, 2)
-        self.assertEqual(calculation.get_product(), 16, 'The product is wrong.')
-
-    def test_quotient(self):
-        calculation = Calculations(8, 2)
-        self.assertEqual(calculation.get_quotient(), 4, 'The quotient is wrong.')
-
+    def test_divide(self):
+        calc = Calculations(8, 2)
+        self.assertEqual(calc.get_quotient(), 4, 'Division failed.')
 
 if __name__ == '__main__':
     unittest.main()
